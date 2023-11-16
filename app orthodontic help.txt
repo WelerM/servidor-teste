@@ -1,0 +1,21 @@
+Instalação:
+	#1 Baixar e instalar NodeJS
+	#2 Transferir pasta "servidor-fila-atendimento" à raiz do disco C
+	#3 Transferir pasta "pms2-installer-main" à raiz do disco C
+	#4 No path de "pms2-installer-main", digitar os seguintes comandos:
+		$ npm run configure
+		$ npm run configure-policy
+		$ npm setup
+
+	#5 Abrir os 'serviços' do windows e pesquisar pelo novo serviço PM2. Botão direito, propriedades,
+	log On, marcar "local system account".
+
+	#6 No path de "servidor-fila-atendimento" digitar os comandos:
+		$ pm2 start
+		$ pm2 save
+
+	#7 Firewall:
+	 Abrir Segurança do Windows > Firewall e proteção de rede > Permitir um aplicativo pelo firewall > alterar configs > habilitar "Node js"
+
+	#8 Criar atalho de "localhost:3001" na área de trabalho
+	
